@@ -1,0 +1,10 @@
+[
+  {
+    "title": "About Me",
+    "description": "Experienced Full Stack Developer with great technical knowledge surrounding React, JavaScript, TypeScript, AWS, GraphQL, Node and more. Obtained AWS Cloud Practitioner Certification and looking to gain further certifications in the solution architect field. Problem solving fanatic, enthralled with computational thinking and logic. I actively look for opportunities to lead especially in areas where I am an SME and can pass knowledge onto others and help mentor and enable growth."
+  },
+  {
+    "title": "Technical Stack",
+    "description": "Development: React, TS, JS, Node, GraphQL, HTML, CSS, Vue, Next \n Testing: React Testing Library, Jest, Enzyme, Cypress \n Design: Figma, Storybook, Carbon \n Cloud Technologies: AWS, Vercel"
+  }
+]
