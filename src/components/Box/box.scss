@@ -1,12 +1,11 @@
+$tablet-breakpoint: 768px;
+
 .smp-box-outer {
-    background-color: #DADADA;
-    border-radius: 0.9375rem;
-    margin-bottom: 2rem;
-    color: #000000;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-bottom: 2rem;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .smp-box {
@@ -19,5 +18,31 @@
   &__description {
     margin-left: 5%;
     margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .smp-box-outer {
+    margin-bottom: 2rem;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .smp-box {
+    min-height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    &__description {
+      p {
+        font-size: 12px;
+      }
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   }
 }

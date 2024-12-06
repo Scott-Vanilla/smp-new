@@ -1,4 +1,5 @@
 $tablet-breakpoint: 768px;
+$secondary-desktop-breakpoint: 1250px;
 
 .App {
   width: 100vw;
@@ -6,12 +7,37 @@ $tablet-breakpoint: 768px;
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: $secondary-desktop-breakpoint) {
+.smp-main-content{
+  &__box-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+}
+
 @media only screen and (max-width: $tablet-breakpoint) {
   .smp-main-content {
+    &__cv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      &__button {
+        button {
+          color: white;
+          background-color: black;
+          border-radius: 1rem;
+          height: 50px;
+          width: 400px;
+          text-align: center;
+        }
+      }
+    }
     &__center {
     }
     &__title {
-      width: 100% !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,6 +58,8 @@ $tablet-breakpoint: 768px;
       justify-content: center;
       flex-direction: column;
       margin-bottom: 2.5%;
+      width: auto;
+      height: auto;
       background-color: #f0f0f0;
     }
     &__location {
@@ -41,16 +69,92 @@ $tablet-breakpoint: 768px;
       flex-direction: column;
       margin-bottom: 1%;
     }
-    &__box {
+    &__box-container {
       display: flex;
+      flex-direction: column;
+      width: 75%;
+    }
+    &__box {
+      flex: 1;
+    }
+    &__highlights-title {
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-bottom: 2rem;
+    }
+    &__highlights {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5%;
+      margin-bottom: 3rem;
+    }
+    &__highlight {
+      display: flex;
       flex-direction: column;
-      margin-bottom: 1%;
+      width: fit-content;
+      position: relative;
+      &__title {
+        text-align: center;
+      }
+      &__img:hover .smp-main-content__highlight__img__overlay {
+        opacity: 0.75;
+      }
+      &__img {
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 50%;
+        &__overlay {
+          position: absolute;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+          height: 400px;
+          width: 400px;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: #ffffff;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          justify-content: center;
+          &__head {
+            h3 {
+              color: black;
+              font-size: 20px;
+            }
+          }
+          &__body {
+            color: black;
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
 .smp-main-content {
+  &__cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    &__button {
+      button {
+        color: white;
+        background-color: black;
+        border-radius: 1rem;
+        height: 50px;
+        width: 400px;
+        text-align: center;
+      }
+    }
+  }
   &__center {
   }
   &__title {
@@ -83,11 +187,74 @@ $tablet-breakpoint: 768px;
     flex-direction: column;
     margin-bottom: 1%;
   }
-  &__box {
+  &__box-container {
     display: flex;
+  }
+  &__box {
+    flex: 1;
+  }
+  &__highlights-title {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin-bottom: 1%;
+    margin-bottom: 2rem;
   }
+  &__highlights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-bottom: 3rem;
+  }
+  &__highlight {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    &__title {
+      text-align: center;
+    }
+    &__img:hover .smp-main-content__highlight__img__overlay {
+      opacity: 0.75;
+    }
+    &__img {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 50%;
+      &__overlay {
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        height: 400px;
+        width: 400px;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        &__head {
+          h3 {
+            color: black;
+            font-size: 20px;
+          }
+        }
+        &__body {
+          color: black;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.smp-hr {
+  border: 1px solid black;
+  margin: 0 5rem 0 5rem;
 }

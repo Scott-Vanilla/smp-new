@@ -10,3 +10,17 @@
     gap: 10%;
   }
 }
+
+  .smp-nav {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10%;
+    }
+  }
+  

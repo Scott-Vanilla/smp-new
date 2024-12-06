@@ -1,6 +1,20 @@
+$tablet-breakpoint: 768px;
+
 .smp-location-block{
     min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+    .smp-location-block{
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__info{
+            font-size: 12px;
+        }
+    }
 }
