@@ -65,12 +65,14 @@ function App() {
             </div>
             <hr className="smp-hr" />
             <div className="smp-main-content__highlights-title">
+            <div className="smp-main-content__highlights-title__content">
               <h2>Highlights</h2>
               <p>
                 This section displays the top projects/applications I have
                 worked on across my career, some due to the impressive nature
                 and others because they're simply my favourite.
               </p>
+              </div>
             </div>
             <div className="smp-main-content__highlights">
               <div className="smp-main-content__highlight">
